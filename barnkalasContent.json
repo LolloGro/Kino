@@ -2,7 +2,7 @@
   "barnkalas": [
     {
       "imgHero": "./img/heroBarnkalas.png",
-      "imgHeroDesktop": "./img/heroBarnkalasDesktop.png",
+      "imgHeroDesktop": "/img/heroBarnkalasDesktop.png",
       "imgAltHero": "ballons",
       "imgTextDesktop": "./img/heroText.png",
       "imgAltDesktop": "barnkalas på Kino bio",
