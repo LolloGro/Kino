@@ -69,7 +69,7 @@ async function loadMovies() {
 }
 
 async function loadMovieHeadline() {
-  const response = await fetch('data/moviesHeadline.json');
+  const response = await fetch('./moviesHeadline.json');
   if (!response.ok) {
     throw new Error(`HTTP-error! Status: ${response.status}`);
   }
