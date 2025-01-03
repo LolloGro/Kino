@@ -147,4 +147,7 @@ export async function buildDoc() {
   });
 }
 
-buildDoc();
+
+export async function loadInfoModal() {
+  buildDoc();
+}

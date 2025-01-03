@@ -1,4 +1,4 @@
-(async function startFooter() {
+async function startFooter() {
   try {
     const response = await fetch('./footer.json');
     const data = await response.json();
@@ -86,4 +86,10 @@
   } catch (error) {
     console.error('error', error);
   }
-})();
+};
+
+export async function loadFooter() {
+  startFooter();
+}
+
+
