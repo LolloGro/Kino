@@ -26,8 +26,9 @@ if (checkAbout) {
   loadAbout();
 }
 
-const checkInfo = document.querySelector('.info-modal');
+const checkInfo = document.querySelector('.information');
+const checkModal = document.querySelector('.info-modal');
 
-if (checkInfo) {
+if (checkInfo || checkModal) {
   loadInfoModal();
 }

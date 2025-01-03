@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
 
 export default defineConfig({
   base: '/Test-Kino-deploy/',
@@ -7,8 +7,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        kids: resolve(__dirname, 'pages/kids/kids.html'),
-        about: resolve(__dirname, 'pages/about/about.html')
+        kids: resolve(__dirname, 'kids.html'),
+        about: resolve(__dirname, 'about.html')
       }
     }
   },
