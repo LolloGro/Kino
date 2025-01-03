@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "serve": "npm run build && vite preview",
     "preview": "vite preview",
     "prepare": "husky install"
   },
