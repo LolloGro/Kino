@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/<Test-Kino-deploy/',
   build: {
     rollupOptions: {
       input: {
