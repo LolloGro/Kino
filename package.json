@@ -5,7 +5,7 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "devStart": "npx nodemon server.js",
+    "start": "npx nodemon server.js",
     "dev": "vite",
     "build": "vite build",
     "serve": "npm run build && vite preview",
