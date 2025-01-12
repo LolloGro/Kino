@@ -1,6 +1,6 @@
-(async function startFooter() {
+async function startFooter() {
   try {
-    const response = await fetch('../../data/footer.json');
+    const response = await fetch('./footer.json');
     const data = await response.json();
     const footer = document.querySelector('.footer-container');
 
@@ -86,4 +86,10 @@
   } catch (error) {
     console.error('error', error);
   }
-})();
+};
+
+export async function loadFooter() {
+  startFooter();
+}
+
+

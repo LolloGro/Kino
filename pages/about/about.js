@@ -1,5 +1,5 @@
 async function fetchAboutJson() {
-  const res = await fetch('../../data/about.json');
+  const res = await fetch('./about.json');
   const data = await res.json();
   return {
     mainHeadline: data.aboutUs,
@@ -66,4 +66,7 @@ function createSections(aboutData, pageHeadline, mainHeadline) {
   section4.appendChild(content4);
 }
 
-updateDomWithAboutJson();
+
+export async function loadAbout() {
+  updateDomWithAboutJson();
+}

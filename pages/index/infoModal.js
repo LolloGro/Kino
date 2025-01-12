@@ -1,5 +1,5 @@
 async function loadJSON() {
-  const response = await fetch('../../data/infoModal.json');
+  const response = await fetch('./infoModal.json');
   const data = await response.json();
   return data;
 }
@@ -147,4 +147,7 @@ export async function buildDoc() {
   });
 }
 
-buildDoc();
+
+export async function loadInfoModal() {
+  buildDoc();
+}
