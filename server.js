@@ -1,21 +1,17 @@
 import express from "express";
+import { engine } from "express-handlebars";
 import fs from 'fs/promises';
 
 const app = express();
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './templates')
 
-app.use("/Test-Kino-deploy/", express.static("dist"));
-app.use(express.static("dist"));
+app.use("/dist", express.static("dist"));
+app.use("/", express.static("dist"));
 
 async function renderPage(res, page) {
-  const buf = await fs.readFile(`./dist/${page}.html`);
-  const html = buf.toString();
-
-  const templateBuf = await fs.readFile("./templates/main.html");
-  const templateHtml = templateBuf.toString();
-
-  const outHtml = templateHtml.replace("%&BODY&%", html);
-
-  res.send(outHtml);
+  res.render(page);
 }
 
 app.get("/", (req, res) => {
@@ -30,4 +26,8 @@ app.get("/kids", async (req, res) => {
   renderPage(res, "kids");
 });
 
-app.listen(3080); 
+app.get("/test", async (req, res) => {
+  res.send(console.log(allMvoies));
+});
+
+app.listen(5080); 
