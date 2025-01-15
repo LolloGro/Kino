@@ -1,0 +1,11 @@
+<a href="/">Return to homepage</a>
+
+<article>
+  <h1>{{singleMovie.attributes.title}}</h1>
+  <div>
+    {{{singleMovie.attributes.intro}}}
+  </div>
+  {{#if singleMovie.attributes.image}}
+  <img src="{{singleMovie.attributes.image.url}}">
+  {{/if}}
+</article>
