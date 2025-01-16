@@ -1,0 +1,32 @@
+@use '../src/lib.scss' as *;
+
+.movie-headText {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  color: $text-color-main;
+  font-weight: 700;
+}
+
+.movie-listText {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+
+  .movie-listItems {
+    list-style-type: none;
+    padding-bottom: 1rem;
+  }
+
+  .movie-listLink {
+    color: $text-color-main;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      color: $red-color;
+
+    }
+  }
+}

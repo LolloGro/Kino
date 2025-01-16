@@ -4,11 +4,12 @@
   max-width: 1280px;
   background-color: $background-color;
   margin: 0 auto;
-  padding: 0 1rem;
-  font-size: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
   color: $text-color-main;
-  font-weight: 400;
+  font-weight: 700;
 }
+
 .movie-container {
   max-width: 1280px;
   background-color: $background-color;
@@ -18,12 +19,14 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 0 1rem;
   margin: 0 auto;
+
   .movie-card {
     img {
       max-width: 100%;
       height: auto;
       display: block;
     }
+
     h2 {
       font-size: 1rem;
       font-weight: 400;
@@ -33,6 +36,7 @@
         cursor: pointer;
       }
     }
+
     p {
       font-size: 0.8rem;
       margin: 0;
@@ -78,6 +82,7 @@
   .movie-headline {
     font-size: 1.3rem;
   }
+
   .movie-container {
     grid-template-columns: repeat(3, 1fr);
   }
