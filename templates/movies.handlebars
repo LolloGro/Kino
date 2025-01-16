@@ -13,13 +13,13 @@
   </div>
 </main>
 
-<h2>Visas nu på KINO Sandviken</h2>
+<h2 class="movie-headText">Visas nu på KINO Sandviken</h2>
 
-<div class="movies-display">
-  <ul>
+<div class="movie-listText">
+  <ul class="movie-list">
     {{#each allMovies}}
-    <li>
-      <a href="/movies/{{this.id}}">
+    <li class="movie-listItems">
+      <a class="movie-listLink" href="/movies/{{this.id}}">
         {{this.attributes.title}}
       </a>
     </li>
