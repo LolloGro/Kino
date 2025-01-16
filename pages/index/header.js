@@ -1,6 +1,6 @@
 //Getting the JSON file header.json and its data.
 async function fetchHeaderData() {
-  const response = await fetch('./header.json');
+  const response = await fetch('/static/header.json');
   const headerData = await response.json();
   return headerData;
 }
@@ -82,8 +82,11 @@ function createNavigation(headerData) {
       case 'Barnkalas':
         menuLink.href = '/kids';
         break;
+      case 'Kommande filmer':
+        menuLink.href = '/kommande';
+        break;
       default:
-        menuLink.href = '#';
+        menuLink.href = '/coming';
     }
 
     menuLink.textContent = link.text;

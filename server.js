@@ -12,25 +12,29 @@ app.get('/', async (req, res) => {
   res.render('movies', { allMovies });
 });
 
-app.get('/about', async (req, res) => {
-  res.render('about');
+app.get('/movies/:id', async (req, res) => {
+  const singleMovie = await loadMovie(req.params.id);
+  res.render('movie', { singleMovie });
 });
 
 app.get('/kids', async (req, res) => {
   res.render('kids');
 });
 
-app.get('/movies', async (req, res) => {
+app.get('/about', async (req, res) => {
+  res.render('about');
+});
+
+app.get('/kommande', async (req, res) => {
   res.render('index');
 });
-
-app.get('/movies/:id', async (req, res) => {
-  const singleMovie = await loadMovie(req.params.id);
-  res.render('movie', { singleMovie });
+app.get('/coming', async (req, res) => {
+  res.render('coming');
 });
 
-app.use('/dist', express.static('dist'));
-app.use('/', express.static('dist'));
-app.use('/movies/dist', express.static('dist'));
+
+
+app.use('/static', express.static('./dist/assets'));
+app.use('/static', express.static('./dist'));
 
 app.listen(5080); 

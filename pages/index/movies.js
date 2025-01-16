@@ -1,5 +1,5 @@
 async function loadMovies() {
-  const response = await fetch('./movies.json');
+  const response = await fetch('/static/movies.json');
   if (!response.ok) {
     throw new Error(`HTTP-error! Status: ${response.status}`);
   }
@@ -69,7 +69,7 @@ async function loadMovies() {
 }
 
 async function loadMovieHeadline() {
-  const response = await fetch('./moviesHeadline.json');
+  const response = await fetch('/static/moviesHeadline.json');
   if (!response.ok) {
     throw new Error(`HTTP-error! Status: ${response.status}`);
   }

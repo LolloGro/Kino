@@ -1,5 +1,5 @@
 async function fetchAboutJson() {
-  const res = await fetch('./about.json');
+  const res = await fetch('/static/about.json');
   const data = await res.json();
   return {
     mainHeadline: data.aboutUs,

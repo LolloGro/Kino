@@ -13,8 +13,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 148,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 2,
@@ -30,8 +30,8 @@
     ],
     "Språk": "Koreanska",
     "Längd": 132,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 3,
@@ -47,8 +47,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 152,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 4,
@@ -64,8 +64,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 169,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 5,
@@ -81,8 +81,8 @@
     ],
     "Språk": "Japanska",
     "Längd": 125,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 6,
@@ -98,8 +98,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 175,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 7,
@@ -115,8 +115,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 102,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 9,
@@ -132,8 +132,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 150,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 8,
@@ -149,8 +149,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 122,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 10,
@@ -166,8 +166,8 @@
     ],
     "Språk": "Engelska",
     "Längd": 100,
-    "Bild": "./img/movieimg.png",
-    "Label": "Visas nu"
+    "Bild": "/static/img/movieimg.png",
+    "Label": "Kommande"
   },
   {
     "ID": 11,
@@ -183,7 +183,7 @@
     ],
     "Språk": "Engelska",
     "Längd": 181,
-    "Bild": "./img/movieimg.png",
+    "Bild": "/static/img/movieimg.png",
     "Label": "Kommande"
   },
   {
@@ -200,7 +200,7 @@
     ],
     "Språk": "Engelska",
     "Längd": 155,
-    "Bild": "./img/movieimg.png",
+    "Bild": "/static/img/movieimg.png",
     "Label": "Kommande"
   },
   {
@@ -217,7 +217,7 @@
     ],
     "Språk": "Engelska",
     "Längd": 88,
-    "Bild": "./img/movieimg.png",
+    "Bild": "/static/img/movieimg.png",
     "Label": "Kommande"
   },
   {
@@ -234,7 +234,7 @@
     ],
     "Språk": "Engelska",
     "Längd": 134,
-    "Bild": "./img/movieimg.png",
+    "Bild": "/static/img/movieimg.png",
     "Label": "Kommande"
   },
   {
@@ -251,7 +251,7 @@
     ],
     "Språk": "Engelska",
     "Längd": 107,
-    "Bild": "./img/movieimg.png",
+    "Bild": "/static/img/movieimg.png",
     "Label": "Kommande"
   }
 ]

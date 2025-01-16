@@ -1,15 +1,15 @@
 {
   "kinoImg": {
-    "src": "./img/kinoImg.png",
+    "src": "/static/img/kinoImg.png",
     "alt": "Image with Kino logo"
   },
   "buttons": [
     {
-      "openButton": "./img/QnAOpen.png",
+      "openButton": "/static/img/QnAOpen.png",
       "alt": "Plus icon with circle around"
     },
     {
-      "closeButton": "./img/QnAClose.png",
+      "closeButton": "/static/img/QnAClose.png",
       "alt": "Minus icon with circle around"
     },
     {
