@@ -1,4 +1,4 @@
-@use '../src/lib.scss' as *;
+@use './lib/lib.scss' as *;
 
 #navigation-menu {
   margin: 1rem;
@@ -28,8 +28,10 @@
       flex: 1;
     }
   }
+
   a {
     text-decoration: none;
+
     .brand-name {
       color: $text-color-main;
       font-size: 1.5rem;
@@ -43,19 +45,24 @@
     color: $text-color-main;
     font-size: 2rem;
     padding: 0.8rem 1.2rem;
+
     .fa-bars {
       transform: scale(1.4, 1);
     }
+
     @include breakpointMinWidth($screen-medium) {
       display: none;
     }
   }
+
   .nav-logo {
     display: flex;
     padding: 0rem 0rem 0rem 0.3rem;
   }
+
   .menu-links {
     display: none;
+
     a {
       text-decoration: none;
       color: $text-color-main;
@@ -84,6 +91,7 @@
       }
     }
   }
+
   .menu-overlay {
     position: fixed;
     top: 50%;
@@ -106,6 +114,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .menu-links {
       display: flex;
       flex-direction: column;
@@ -131,6 +140,7 @@
       color: $text-color-main;
     }
   }
+
   .overlay-blur {
     opacity: 0;
     pointer-events: none;

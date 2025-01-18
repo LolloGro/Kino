@@ -1,4 +1,4 @@
-@use '../src/lib.scss' as *;
+@use './lib/lib.scss' as *;
 
 .info-modal {
   background-color: $background-div-color;
@@ -23,16 +23,20 @@
       grid-row: 1;
       @include listItemStyle;
     }
+
     .modal-item-0:hover {
       cursor: pointer;
     }
+
     .modal-item-1 {
       grid-row: 2;
       @include listItemStyle;
     }
+
     .modal-item-1:hover {
       cursor: pointer;
     }
+
     .modal-item-2 {
       grid-row: 3;
       @include listItemStyle;
@@ -43,11 +47,13 @@
 
       .open-times {
         @include dateStyling;
+
         @media screen and (min-width: $screen-mini) {
           max-width: 400px;
         }
       }
     }
+
     .modal-item-2:hover {
       cursor: pointer;
     }

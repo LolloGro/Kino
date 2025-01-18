@@ -3,9 +3,9 @@
 <article class="movie-articel">
   <div class="movie-div">
     <h1 class="movie-header">{{singleMovie.attributes.title}}</h1>
-    <div class="movie-text">
+    <p class="movie-text">
       {{{singleMovie.attributes.intro}}}
-    </div>
+    </p>
     {{#if singleMovie.attributes.image}}
     <img class="movie-image" src="{{singleMovie.attributes.image.url}}">
     {{/if}}

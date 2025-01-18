@@ -1,17 +1,13 @@
-# Kino_Group_Project
+# Kino_
 
 Quick guide for the project.
 
 ## First time you open to project:
 
 1. npm install.
-2. npm install eslist@latest --save-dev.
 
 ## Commands that are good to know.
 
-1.  Start liveserver: npm run dev.
- 
- 
- npm install --save-dev nomdemon
- npm run devStart
+1.  Start liveserver: npm start
+2.  Start test: 
  
