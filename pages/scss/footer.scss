@@ -1,4 +1,4 @@
-@use '../src/lib.scss' as *;
+@use './lib/lib.scss' as *;
 
 .footer-container {
   background-color: $background-div-color;
@@ -36,6 +36,7 @@
     color: $red-color;
     margin-bottom: 3rem;
   }
+
   span {
     display: block;
     border-top: 0.5rem solid $text-color-secondary;
@@ -47,6 +48,7 @@
     display: inline;
     margin-top: 1rem;
   }
+
   .footer-logotext {
     display: inline;
     padding-left: 1rem;

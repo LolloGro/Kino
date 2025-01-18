@@ -1,0 +1,28 @@
+<main>
+  <div class="info">
+    <div class="info-1">
+      <h1 class="cinema-title"></h1>
+      <p class="cinema-open"></p>
+      <div class="info-modal">
+        <ul class="info-modal-list"></ul>
+      </div>
+    </div>
+    <div class="info-2">
+      <img class="kino-img" />
+    </div>
+  </div>
+</main>
+
+<h2 class="movies-headText">Visas nu på KINO Sandviken</h2>
+
+<div class="movies-listText">
+  <ul class="movies-list">
+    {{#each allMovies}}
+    <li class="movies-listItems">
+      <a class="movies-listLink" href="/movies/{{this.id}}">
+        {{this.attributes.title}}
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</div>

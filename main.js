@@ -1,9 +1,9 @@
-import { initHeader } from './pages/index/header.js';
-import { loadkids } from './pages/kids/kids.js';
-import { loadMovieContent } from './pages/index/movies.js';
-import { loadAbout } from './pages/about/about.js';
-import { loadFooter } from './pages/index/footer.js';
-import { loadInfoModal } from './pages/index/infoModal.js';
+import { initHeader } from './pages/js/header.js'
+import { loadkids } from './pages/js/kids.js';
+import { loadMovieContent } from './pages/js/movies.js';
+import { loadAbout } from './pages/js/about.js';
+import { loadFooter } from './pages/js/footer.js';
+import { loadInfoModal } from './pages/js/infoModal.js';
 
 initHeader();
 loadFooter();

@@ -1,6 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars";
-import { loadMovie, loadMovies } from "./getData.js";
+import { loadMovie, loadMovies } from "./pages/js/loadData.js";
 
 const app = express();
 app.engine('handlebars', engine());
@@ -32,9 +32,7 @@ app.get('/coming', async (req, res) => {
   res.render('coming');
 });
 
-
-
 app.use('/static', express.static('./dist/assets'));
 app.use('/static', express.static('./dist'));
 
-app.listen(5080); 
+app.listen(3080); 

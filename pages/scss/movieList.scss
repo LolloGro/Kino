@@ -1,0 +1,34 @@
+@use './lib/lib.scss' as *;
+
+.movies-headText {
+  padding: 2rem;
+  font-size: 1.5rem;
+
+  @include breakpointMinWidth($screen-medium) {
+    max-width: 1280px;
+    font-size: 2rem;
+    color: $text-color-main;
+    font-weight: 700;
+  }
+}
+
+.movies-listText {
+  max-width: 1280px;
+  padding-bottom: 4rem;
+
+  .movies-listItems {
+    list-style-type: none;
+    padding-bottom: 1.25rem;
+  }
+
+  .movies-listLink {
+    color: $text-color-main;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      color: $red-color;
+
+    }
+  }
+}
