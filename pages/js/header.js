@@ -85,6 +85,9 @@ function createNavigation(headerData) {
       case 'Kommande filmer':
         menuLink.href = '/kommande';
         break;
+      case 'Aktuella filmer':
+        menuLink.href = '/aktuella';
+        break;
       default:
         menuLink.href = '/coming';
     }

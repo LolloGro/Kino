@@ -1,20 +1,29 @@
 import express from "express";
-import { engine } from "express-handlebars";
 import { loadMovie, loadMovies } from "./pages/js/loadData.js";
 
 const app = express();
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', './templates')
+const PORT = 5080;
+
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 app.get('/', async (req, res) => {
   const allMovies = await loadMovies();
   res.render('movies', { allMovies });
 });
 
-app.get('/movies/:id', async (req, res) => {
+app.get('/movies/:id', async (req, res, next) => {
   const singleMovie = await loadMovie(req.params.id);
   res.render('movie', { singleMovie });
+});
+
+app.get('/aktuella', async (req, res) => {
+  const allMovies = await loadMovies();
+  res.render('movies', { allMovies })
+})
+
+app.get('/kommande', async (req, res) => {
+  res.render('index');
 });
 
 app.get('/kids', async (req, res) => {
@@ -25,9 +34,6 @@ app.get('/about', async (req, res) => {
   res.render('about');
 });
 
-app.get('/kommande', async (req, res) => {
-  res.render('index');
-});
 app.get('/coming', async (req, res) => {
   res.render('coming');
 });
@@ -35,4 +41,6 @@ app.get('/coming', async (req, res) => {
 app.use('/static', express.static('./dist/assets'));
 app.use('/static', express.static('./dist'));
 
-app.listen(3080); 
+app.listen(PORT, () =>
+  console.log(`server running on port ${PORT}`)
+);
