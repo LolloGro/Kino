@@ -7,9 +7,9 @@
       <h1 class="movie-header">
         <%= singleMovie.attributes.title %>
       </h1>
-      <p class="movie-text">
-        <%= singleMovie.attributes.intro %>
-      </p>
+      <div class="movie-text">
+        <%- singleMovie.attributes.intro %>
+      </div>
       <img class="movie-image" src="<%= singleMovie.attributes.image.url %>">
     </div>
   </article>
