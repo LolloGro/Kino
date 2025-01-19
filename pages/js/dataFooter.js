@@ -1,43 +1,46 @@
-async function startFooter() {
-  try {
-    const response = await fetch('/static/footer.json');
-    const data = await response.json();
-    const footer = document.querySelector('.footer-container');
+export default class footerContent {
+  constructor(data) {
+    this.data = data;
+  }
 
-    const sectionsContainer = document.createElement('div');
+  render(elem) {
+
+    const footer = elem.querySelector('.footer-container');
+
+    const sectionsContainer = elem.createElement('div');
     sectionsContainer.classList.add('sections-container');
 
-    data.footer.sections.forEach((section) => {
-      const sectionDiv = document.createElement('section');
+    this.data.footer.sections.forEach((section) => {
+      const sectionDiv = elem.createElement('section');
       sectionDiv.classList.add('footer-section');
 
-      const sectionTitle = document.createElement('h4');
+      const sectionTitle = elem.createElement('h4');
       sectionTitle.textContent = section.title;
       sectionDiv.append(sectionTitle);
 
-      const ul = document.createElement('ul');
+      const ul = elem.createElement('ul');
 
       if (section.contact) {
         section.contact.forEach((contact) => {
-          const liEmail = document.createElement('li');
+          const liEmail = elem.createElement('li');
           liEmail.textContent = `E-post: ${contact.mail}`;
           ul.append(liEmail);
-          const liPhone = document.createElement('li');
+          const liPhone = elem.createElement('li');
           liPhone.textContent = `Telefonnummer: ${contact.phoneNumber}`;
           ul.append(liPhone);
         });
       } else if (section.links) {
         section.links.forEach((link) => {
-          const li = document.createElement('li');
+          const li = elem.createElement('li');
 
           if (link.icon) {
-            const icon = document.createElement('img');
+            const icon = elem.createElement('img');
             icon.src = link.icon;
             icon.alt = `${link.text || link.name} icon`;
             icon.classList.add('footer-icon');
             li.append(icon);
           }
-          const a = document.createElement('a');
+          const a = elem.createElement('a');
           a.href = link.url;
           a.textContent = link.text || link.name;
           a.classList.add('footer-a');
@@ -46,16 +49,16 @@ async function startFooter() {
         });
       } else if (section.adress) {
         section.adress.forEach((address) => {
-          const liStreet = document.createElement('li');
+          const liStreet = elem.createElement('li');
           liStreet.textContent = address.street;
           ul.appendChild(liStreet);
 
-          const liTown = document.createElement('li');
+          const liTown = elem.createElement('li');
           liTown.textContent = address.town;
           ul.appendChild(liTown);
 
-          const liFindUs = document.createElement('li');
-          const aFindUs = document.createElement('a');
+          const liFindUs = elem.createElement('li');
+          const aFindUs = elem.createElement('a');
           aFindUs.href = address.url;
           aFindUs.textContent = address.findUs;
           aFindUs.classList.add('footer-afind');
@@ -69,27 +72,20 @@ async function startFooter() {
 
     footer.append(sectionsContainer);
 
-    const span = document.createElement('span');
+    const span = elem.createElement('span');
     span.classList.add('footer-logo-p');
     footer.append(span);
 
-    const logo = document.createElement('img');
-    logo.src = data.footer.logo;
+    const logo = elem.createElement('img');
+    logo.src = this.data.footer.logo;
     logo.alt = 'Kino Bio Logo';
     logo.classList.add('footer-logo');
     span.append(logo);
 
-    const text = document.createElement('p');
-    text.textContent = data.footer.text;
+    const text = elem.createElement('p');
+    text.textContent = this.data.footer.text;
     text.classList.add('footer-logotext');
     span.append(text);
-  } catch (error) {
-    console.error('error', error);
+
   }
-};
-
-export async function loadFooter() {
-  startFooter();
 }
-
-
