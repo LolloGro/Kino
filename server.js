@@ -1,5 +1,6 @@
 import express from "express";
 import { loadMovie, loadMovies } from "./pages/js/loadData.js";
+import { marked } from "marked";
 
 const app = express();
 const PORT = 5080;
@@ -14,6 +15,10 @@ app.get('/', async (req, res) => {
 
 app.get('/movies/:id', async (req, res, next) => {
   const singleMovie = await loadMovie(req.params.id);
+  const mark = marked.parse(singleMovie.attributes.intro);
+  singleMovie.attributes.intro = mark;
+
+  console.log(singleMovie);
   res.render('movie', { singleMovie });
 });
 
