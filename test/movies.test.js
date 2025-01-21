@@ -1,6 +1,8 @@
 import { expect, jest, test } from '@jest/globals';
-import app from '../app.js';
+import startApp from '../app.js';
 import request from 'supertest';
+
+const app = startApp();
 
 test('Movies is displayed in list on homepage', async () => {
   const response = await request(app)

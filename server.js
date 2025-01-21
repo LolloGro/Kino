@@ -1,4 +1,6 @@
-import app from './app.js';
+import startApp from "./app.js";
+
+const app = startApp();
 
 const PORT = 5080;
 
