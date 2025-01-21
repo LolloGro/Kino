@@ -31,9 +31,14 @@ if (checkMovies) {
   const comingMovies = await loadAPI('/static/movies.json');
   const contentMovies = new movieContent(comingMovies);
   contentMovies.render(document);
+}
 
-  const comingHeadline = await loadAPI('/static/moviesHeadline.json');
-  const contentHeadline = new headlineContent(comingHeadline);
+const checkHeader = document.querySelector('.movies-headText');
+const checkHeadline = document.querySelector('.movie-headline');
+
+if (checkHeader || checkHeadline) {
+  const movieHeadline = await loadAPI('/static/moviesHeadline.json');
+  const contentHeadline = new headlineContent(movieHeadline);
   contentHeadline.render(document);
 }
 

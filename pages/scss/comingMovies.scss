@@ -4,8 +4,8 @@
   max-width: 1280px;
   background-color: $background-color;
   margin: 0 auto;
-  padding: 1rem;
-  font-size: 2rem;
+  padding: 2rem;
+  font-size: 1.5rem;
   color: $text-color-main;
   font-weight: 700;
 }
@@ -80,7 +80,7 @@
 
 @media screen and (min-width: 500px) {
   .movie-headline {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   .movie-container {
