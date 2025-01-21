@@ -2,19 +2,19 @@ import express from "express";
 import { loadMovie, loadMovies } from "./pages/js/loadData.js";
 import { marked } from "marked";
 
-function startApp() {
+function startApp(api) {
   const app = express();
 
   app.set('view engine', 'ejs');
   app.set('views', 'views');
 
   app.get('/', async (req, res) => {
-    const allMovies = await loadMovies();
+    const allMovies = await api.loadMovies();
     res.render('movies', { allMovies });
   });
 
   app.get('/movies/:id', async (req, res, next) => {
-    const singleMovie = await loadMovie(req.params.id);
+    const singleMovie = await api.loadMovie(req.params.id);
     if (singleMovie == null) {
       console.log("error");
       res.render('noMovie');
@@ -29,7 +29,7 @@ function startApp() {
   });
 
   app.get('/aktuella', async (req, res) => {
-    const allMovies = await loadMovies();
+    const allMovies = await api.loadMovies();
     res.render('movies', { allMovies })
   })
 

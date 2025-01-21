@@ -1,10 +1,12 @@
 import { expect, jest, test } from '@jest/globals';
 import startApp from '../app.js';
 import request from 'supertest';
+import { loadMovie, loadMovies } from '../pages/js/loadData.js';
 
-const app = startApp();
+const app = startApp({ loadMovie, loadMovies });
 
 test('Movies is displayed in list on homepage', async () => {
+
   const response = await request(app)
     .get('/')
     .expect('Content-Type', /html/)
@@ -17,6 +19,7 @@ test('Movies is displayed in list on homepage', async () => {
 });
 
 test('Choosen movie is displayed on homepage', async () => {
+
   const response = await request(app)
     .get('/movies/2')
     .expect('content-Type', /html/)
