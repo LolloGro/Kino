@@ -7,7 +7,7 @@ import movieContent from './pages/js/dataMovies.js';
 import dataKidsContent from './pages/js/dataKidsContent.js';
 import dataKidsEvent from './pages/js/dataKidsEvent.js';
 import aboutContent from './pages/js/dataAbout.js';
-import noMovieExist from './pages/js/noMovie.js';
+import comingContent from './pages/js/dataComing.js'
 
 const contentHeader = await loadAPI('/static/header.json');
 const displayHeader = new headerContent(contentHeader);
@@ -67,10 +67,10 @@ if (checkAbout) {
   contentAbout.render(document);
 }
 
-const checkNoMovie = document.querySelector('.noMovie')
+const checkComing = document.querySelector('.coming')
 
-if (checkNoMovie) {
-  const noResult = await loadAPI('/static/noMovie.json');
-  const resultMovie = new noMovieExist(noResult);
-  resultMovie.render(document);
+if (checkComing) {
+  const coming = await loadAPI('/static/coming.json');
+  const contentComing = new comingContent(coming);
+  contentComing.render(document);
 }
