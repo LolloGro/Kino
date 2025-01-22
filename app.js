@@ -15,7 +15,8 @@ function startApp(api) {
 
   app.get('/movies/:id', async (req, res) => {
     const singleMovie = await api.loadMovie(req.params.id);
-    if (singleMovie == null) {
+
+    if (singleMovie === null) {
       res.status(404);
       res.render('noMovie', { text: "No page found" });
       console.log(res.statusCode);
