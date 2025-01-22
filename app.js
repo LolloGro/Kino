@@ -13,19 +13,19 @@ function startApp(api) {
     res.render('movies', { allMovies });
   });
 
-  app.get('/movies/:id', async (req, res, next) => {
+  app.get('/movies/:id', async (req, res) => {
     const singleMovie = await api.loadMovie(req.params.id);
     if (singleMovie == null) {
-      console.log("error");
       res.render('noMovie');
-    } else {
+      console.log(res.status);
+      return;
+    }
+    if (singleMovie.attributes.intro) {
       const mark = marked.parse(singleMovie.attributes.intro);
       singleMovie.attributes.intro = mark;
-      //GET = 500 Internal Server Error
-
-      console.log(singleMovie);
-      res.render('movie', { singleMovie });
     }
+    //GET = 500 Internal Server Error
+    res.render('movie', { singleMovie });
   });
 
   app.get('/aktuella', async (req, res) => {
