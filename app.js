@@ -16,15 +16,16 @@ function startApp(api) {
   app.get('/movies/:id', async (req, res) => {
     const singleMovie = await api.loadMovie(req.params.id);
     if (singleMovie == null) {
-      res.render('noMovie');
-      console.log(res.status);
+      res.status(404);
+      res.render('noMovie', { text: "No page found" });
+      console.log(res.statusCode);
       return;
     }
     if (singleMovie.attributes.intro) {
       const mark = marked.parse(singleMovie.attributes.intro);
       singleMovie.attributes.intro = mark;
     }
-    //GET = 500 Internal Server Error
+
     res.render('movie', { singleMovie });
   });
 
