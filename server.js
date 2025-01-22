@@ -1,50 +1,14 @@
-import express from "express";
+import startApp from "./app.js";
 import { loadMovie, loadMovies } from "./pages/js/loadData.js";
-import { marked } from "marked";
 
-const app = express();
+const api = {
+  loadMovie,
+  loadMovies
+}
+
+const app = startApp(api);
+
 const PORT = 5080;
-
-app.set('view engine', 'ejs');
-app.set('views', 'views');
-
-app.get('/', async (req, res) => {
-  const allMovies = await loadMovies();
-  res.render('movies', { allMovies });
-});
-
-app.get('/movies/:id', async (req, res, next) => {
-  const singleMovie = await loadMovie(req.params.id);
-  const mark = marked.parse(singleMovie.attributes.intro);
-  singleMovie.attributes.intro = mark;
-
-  console.log(singleMovie);
-  res.render('movie', { singleMovie });
-});
-
-app.get('/aktuella', async (req, res) => {
-  const allMovies = await loadMovies();
-  res.render('movies', { allMovies })
-})
-
-app.get('/kommande', async (req, res) => {
-  res.render('index');
-});
-
-app.get('/kids', async (req, res) => {
-  res.render('kids');
-});
-
-app.get('/about', async (req, res) => {
-  res.render('about');
-});
-
-app.get('/coming', async (req, res) => {
-  res.render('coming');
-});
-
-app.use('/static', express.static('./dist/assets'));
-app.use('/static', express.static('./dist'));
 
 app.listen(PORT, () =>
   console.log(`server running on port ${PORT}`)

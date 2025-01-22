@@ -7,6 +7,7 @@ import movieContent from './pages/js/dataMovies.js';
 import dataKidsContent from './pages/js/dataKidsContent.js';
 import dataKidsEvent from './pages/js/dataKidsEvent.js';
 import aboutContent from './pages/js/dataAbout.js';
+import comingContent from './pages/js/dataComing.js'
 
 const contentHeader = await loadAPI('/static/header.json');
 const displayHeader = new headerContent(contentHeader);
@@ -31,9 +32,14 @@ if (checkMovies) {
   const comingMovies = await loadAPI('/static/movies.json');
   const contentMovies = new movieContent(comingMovies);
   contentMovies.render(document);
+}
 
-  const comingHeadline = await loadAPI('/static/moviesHeadline.json');
-  const contentHeadline = new headlineContent(comingHeadline);
+const checkHeader = document.querySelector('.movies-headText');
+const checkHeadline = document.querySelector('.movie-headline');
+
+if (checkHeader || checkHeadline) {
+  const movieHeadline = await loadAPI('/static/moviesHeadline.json');
+  const contentHeadline = new headlineContent(movieHeadline);
   contentHeadline.render(document);
 }
 
@@ -59,4 +65,12 @@ if (checkAbout) {
   const about = await loadAPI('/static/about.json');
   const contentAbout = new aboutContent(about);
   contentAbout.render(document);
+}
+
+const checkComing = document.querySelector('.coming')
+
+if (checkComing) {
+  const coming = await loadAPI('/static/coming.json');
+  const contentComing = new comingContent(coming);
+  contentComing.render(document);
 }

@@ -10,7 +10,8 @@
       <div class="movie-text">
         <%- singleMovie.attributes.intro %>
       </div>
-      <img class="movie-image" src="<%= singleMovie.attributes.image.url %>">
+      <% if(singleMovie.attributes.image) {%> <img class="movie-image" src="<%= singleMovie.attributes.image.url %>">
+        <%}%>
     </div>
   </article>
 
