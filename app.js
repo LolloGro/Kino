@@ -19,7 +19,7 @@ function startApp(api) {
     if (singleMovie === null) {
       res.status(404);
       res.render('noMovie', { text: "No page found" });
-      console.log(res.statusCode);
+      console.log("HTTP-status", res.statusCode);
       return;
     }
     if (singleMovie.attributes.intro) {

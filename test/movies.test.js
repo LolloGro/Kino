@@ -36,7 +36,7 @@ const app = startApp({
     }],
 });
 
-test('Movies is displayed in list on homepage', async () => {
+test('List of movies is displayed on homepage', async () => {
 
   const response = await request(app)
     .get('/')
